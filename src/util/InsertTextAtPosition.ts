@@ -17,7 +17,7 @@ function canManipulateViaTextNodes(input: HTMLTextAreaElement | HTMLInputElement
   return browserSupportsTextareaTextNodes;
 }
 
-export function insertText(input: HTMLTextAreaElement | HTMLInputElement, text: string) {
+export function insertText(input: HTMLTextAreaElement | HTMLInputElement | any, text: string) {
   // Most of the used APIs only work with the field selected
   input.focus();
 

@@ -7,6 +7,7 @@ export interface TextState {
 }
 
 export interface TextApi {
+  textArea?: any
   /**
    * Replaces the current selection with the new text. This will make the new selectedText to be empty, the
    * selection start and selection end will be the same and will both point to the end

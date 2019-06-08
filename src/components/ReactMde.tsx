@@ -18,6 +18,7 @@ export interface ReactMdeProps {
   onChange: (value: string) => void;
   selectedTab: "write" | "preview";
   onTabChange: (tab: "write" | "preview") => void,
+  onImageUpload: (file: File, scene: string) => string,
   generateMarkdownPreview: GenerateMarkdownPreview;
   minEditorHeight: number;
   maxEditorHeight: number;
@@ -145,6 +146,7 @@ export class ReactMde extends React.Component<ReactMdeProps, ReactMdeState> {
           commands={commands}
           onCommand={this.handleCommand}
           onTabChange={this.handleTabChange}
+          onImageUpload={this.props.onImageUpload}
           tab={selectedTab}
           readOnly={readOnly}
           l18n={l18n}
